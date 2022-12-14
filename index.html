@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather</title>
+  </head>
+  <body>
+    
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-menu">
+      <div class="container">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./img/logo.svg" alt="Logótipo">
+        </a>
+
+        <!-- BOTÃO MOBILE -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- END BOTÃO MOBILE -->
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="d-flex flex-row justify-content-around mx-auto my-auto search-box-menu">
+            <input type="text" class="my-auto search-menu p-0 m-0" placeholder="Pesquise pela cidade">
+            <i class="fa-solid fa-magnifying-glass my-auto"></i>
+          </div>
+          
+          <button type="button" class="btn-settings" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/definicoes.svg" alt="Definições" class="mx-left my-auto menu-icon" /></button>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid submenu">
+      <ul class="navbar-nav d-flex flex-row justify-content-center align-items-center">
+        <li class="submenu-item mx-4 my-1">
+          <a href="#" class="submenu-link">Hoje</a>
+        </li>
+        <li class="submenu-item mx-4 my-1">
+          <a href="#" class="submenu-link">3 horas</a>
+        </li>
+        <li class="submenu-item mx-4 my-1">
+          <a href="#" class="submenu-link">5 dias</a>
+        </li>
+        <li class="submenu-item mx-4 my-1">
+          <a href="#" class="submenu-link">Radar</a>
+        </li>
+        <li class="submenu-item mx-4 my-1">
+          <a href="#" class="submenu-link">Favoritos</a>
+        </li>
+      </ul>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- WEATHER -->
+    <div class="container mt-4">
+
+      <div class="card-group">
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mt-2">HOJE</h5>
+          <p class="text-center">14 Dez.</p>
+          <div class="text-center">
+            <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
+            <p>Humidade 90%</p>
+          </div>
+          <div class="card-body">
+            <p class="text-center">
+              <span class="temp-max">17°</span>
+              /
+              <span class="temp-min">16°</span>
+            </p>
+
+            <p class="text-center">28 km/h</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- END WEATHER -->
+
+    <!-- POPULAR PLACES -->
+    <div class="container-fluid bg-light mt-4">
+      <div class="container">
+        <h3 class="py-4">Top mais pesquisadas</h3>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4 pb-4">
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Leiria</h5>
+                <p class="card-text">
+                  <span class="temp-max">14°</span>
+                  /
+                  <span class="temp-min">8°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Caldas da Rainha</h5>
+                <p class="card-text">
+                  <span class="temp-max">16°</span>
+                  /
+                  <span class="temp-min">10°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Matosinhos</h5>
+                <p class="card-text">
+                  <span class="temp-max">12°</span>
+                  /
+                  <span class="temp-min">8°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Lisboa</h5>
+                <p class="card-text">
+                  <span class="temp-max">18°</span>
+                  /
+                  <span class="temp-min">12°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Porto</h5>
+                <p class="card-text">
+                  <span class="temp-max">13°</span>
+                  /
+                  <span class="temp-min">9°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Bombarral</h5>
+                <p class="card-text">
+                  <span class="temp-max">14°</span>
+                  /
+                  <span class="temp-min">11°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Torres Vedras</h5>
+                <p class="card-text">
+                  <span class="temp-max">15°</span>
+                  /
+                  <span class="temp-min">11°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Antuérpia</h5>
+                <p class="card-text">
+                  <span class="temp-max">9°</span>
+                  /
+                  <span class="temp-min">-2°</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- END POPULAR PLACES -->
+
+    <!-- FOOTER -->
+    <div class="container-fluid bg-footer">
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-4 mt-4 border-top">
+          <div class="col mb-3">
+            <a href="./index.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+              <img src="./img/logo.svg" alt="Logótipo">
+            </a>
+            <p class="footer-year">© PWC 2022</p>
+          </div>
+      
+          <div class="col mb-3">
+      
+          </div>
+      
+          <div class="col mb-3">
+            <h5 class="footer-list-title">Links úteis</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Iníco</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Pricing</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5 class="footer-list-title">Contactos</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Pricing</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5 class="footer-list-title">Informações legais</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Pricing</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- MODAL SETTINGS -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Definições</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Idioma</h6>
+              </div>
+              <div class="col-md-6">
+                <select name="" id="">
+                  <option value="PT">Português</option>
+                  <option value="EN">Inglês</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Medição</h6>
+              </div>
+              <div class="col-md-6">
+                <select name="" id="">
+                  <option value="C">Celsius (C)</option>
+                  <option value="F">Farneheit (F)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL SETTINGS -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

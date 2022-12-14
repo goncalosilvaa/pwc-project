@@ -1,0 +1,110 @@
+@charset "UTF-8"; /* Charset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap'); /* Font */
+
+* {
+    --bg-azul-menu: #008CA2;
+    --bg-azul-submenu: #74B1C7;
+    --bg-body: #D6D4D4;
+    --white: #FFF;
+
+    --tempmax-color: #CB2C2A;
+    --tempmin-color: #008CA2;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*  MENU */
+.bg-menu{
+    background-color: var(--bg-azul-menu);
+}
+
+.navbar-brand > img {
+    width: 50px;
+    height: auto;
+}
+
+.search-box-menu {
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.search-box-menu > i {
+    color: var(--white);
+}
+
+.search-menu{
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+}
+
+.search-menu::placeholder {
+    color: var(--white);
+}
+
+.menu-icon {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.btn-settings {
+    border: none;
+    background-color: transparent;
+}
+
+/* SUBMENU */
+
+.submenu {
+    background-color: var(--bg-azul-submenu);
+}
+
+.submenu-link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.submenu-link:hover {
+    color: var(--white);
+}
+
+/* END SUBMENU */
+
+/* END MENU */
+
+/* WEATHER SECTION */
+.img-weather {
+    width: 60px !important;
+    height: auto !important;
+}
+
+.temp-max {
+    color: var(--tempmax-color);
+}
+
+.temp-min {
+    color: var(--tempmin-color);
+}
+
+/* END WEATHER SECTION */
+
+/* FOOTER */
+.bg-footer {
+    background-color: var(--bg-azul-menu);
+}
+
+.footer-year {
+    color: var(--white);
+}
+
+.footer-list-title {
+    color: var(--white);
+}
+
+.footer-link {
+    color: var(--white);
+}
+
+/* END FOOTER */
