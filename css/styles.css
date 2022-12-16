@@ -13,6 +13,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 /*  MENU */
 .bg-menu{
     background-color: var(--bg-azul-menu);
@@ -88,6 +92,11 @@
     color: var(--tempmin-color);
 }
 
+.cityCardCL {
+    border: none !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /* END WEATHER SECTION */
 
 /* FOOTER */
@@ -108,3 +117,12 @@
 }
 
 /* END FOOTER */
+
+/* MODAL SETTINGS */
+.select-settings {
+    outline: 0;
+    border: none;
+}
+
+
+/* END MODAL SETTINGS */

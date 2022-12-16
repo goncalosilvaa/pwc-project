@@ -14,6 +14,9 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Weather</title>
   </head>
   <body>
@@ -33,8 +36,8 @@
 
         <div class="collapse navbar-collapse" id="navbar">
           <div class="d-flex flex-row justify-content-around mx-auto my-auto search-box-menu">
-            <input type="text" class="my-auto search-menu p-0 m-0" placeholder="Pesquise pela cidade">
-            <i class="fa-solid fa-magnifying-glass my-auto"></i>
+            <input type="text" class="my-auto search-menu p-0 m-0" id="searchCity" placeholder="Pesquise pela cidade">
+            <i class="fa-solid fa-magnifying-glass my-auto" id="searchCityBtn"></i>
           </div>
           
           <button type="button" class="btn-settings" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./img/definicoes.svg" alt="Definições" class="mx-left my-auto menu-icon" /></button>
@@ -65,7 +68,34 @@
     <!-- WEATHER -->
     <div class="container mt-4">
 
-      <div class="card-group">
+      <div class="row" id="current-location">
+        <div class="col-md-5">
+          <div class="card mb-3 p-3 cityCardCL" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4 my-auto">
+                <img src="" alt="" id="imgWeatherCL">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="cityNameCL"></h5>
+                  <p class="card-text">
+                    <span class="temp-max" id="tempMaxCL"></span>
+                    /
+                    <span class="temp-min" id="tempMinCL"></span>
+                  </p>
+                  <p class="card-text m-0" id="feel-weather"></p>
+                  <p class="card-text m-0" id="weatherDescCL"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          
+        </div>
+      </div>
+
+      <div class="card-group" id="weatherGroup">
 
         <div class="card">
           <h5 class="text-center mt-2">HOJE</h5>
@@ -76,9 +106,9 @@
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -86,17 +116,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">AMANHÃ</h5>
+          <p class="text-center">15 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -104,17 +134,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">SEXTA</h5>
+          <p class="text-center">16 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -122,17 +152,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">SÁBADO</h5>
+          <p class="text-center">17 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -140,17 +170,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">DOMINGO</h5>
+          <p class="text-center">18 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -158,17 +188,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">SEGUNDA</h5>
+          <p class="text-center">19 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -176,17 +206,17 @@
         </div>
 
         <div class="card">
-          <h5 class="text-center mt-2">HOJE</h5>
-          <p class="text-center">14 Dez.</p>
+          <h5 class="text-center mt-2">TERÇA</h5>
+          <p class="text-center">20 Dez.</p>
           <div class="text-center">
             <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
             <p>Humidade 90%</p>
           </div>
           <div class="card-body">
             <p class="text-center">
-              <span class="temp-max">17°</span>
+              <span class="temp-max">17°C</span>
               /
-              <span class="temp-min">16°</span>
+              <span class="temp-min">16°C</span>
             </p>
 
             <p class="text-center">28 km/h</p>
@@ -211,9 +241,9 @@
               <div class="card-body">
                 <h5 class="card-title">Leiria</h5>
                 <p class="card-text">
-                  <span class="temp-max">14°</span>
+                  <span class="temp-max">14°C</span>
                   /
-                  <span class="temp-min">8°</span>
+                  <span class="temp-min">8°C</span>
                 </p>
               </div>
             </div>
@@ -224,9 +254,9 @@
               <div class="card-body">
                 <h5 class="card-title">Caldas da Rainha</h5>
                 <p class="card-text">
-                  <span class="temp-max">16°</span>
+                  <span class="temp-max">16°C</span>
                   /
-                  <span class="temp-min">10°</span>
+                  <span class="temp-min">10°C</span>
                 </p>
               </div>
             </div>
@@ -237,9 +267,9 @@
               <div class="card-body">
                 <h5 class="card-title">Matosinhos</h5>
                 <p class="card-text">
-                  <span class="temp-max">12°</span>
+                  <span class="temp-max">12°C</span>
                   /
-                  <span class="temp-min">8°</span>
+                  <span class="temp-min">8°C</span>
                 </p>
               </div>
             </div>
@@ -250,9 +280,9 @@
               <div class="card-body">
                 <h5 class="card-title">Lisboa</h5>
                 <p class="card-text">
-                  <span class="temp-max">18°</span>
+                  <span class="temp-max">18°C</span>
                   /
-                  <span class="temp-min">12°</span>
+                  <span class="temp-min">12°C</span>
                 </p>
               </div>
             </div>
@@ -263,9 +293,9 @@
               <div class="card-body">
                 <h5 class="card-title">Porto</h5>
                 <p class="card-text">
-                  <span class="temp-max">13°</span>
+                  <span class="temp-max">13°C</span>
                   /
-                  <span class="temp-min">9°</span>
+                  <span class="temp-min">9°C</span>
                 </p>
               </div>
             </div>
@@ -276,9 +306,9 @@
               <div class="card-body">
                 <h5 class="card-title">Bombarral</h5>
                 <p class="card-text">
-                  <span class="temp-max">14°</span>
+                  <span class="temp-max">14°C</span>
                   /
-                  <span class="temp-min">11°</span>
+                  <span class="temp-min">11°C</span>
                 </p>
               </div>
             </div>
@@ -289,9 +319,9 @@
               <div class="card-body">
                 <h5 class="card-title">Torres Vedras</h5>
                 <p class="card-text">
-                  <span class="temp-max">15°</span>
+                  <span class="temp-max">15°C</span>
                   /
-                  <span class="temp-min">11°</span>
+                  <span class="temp-min">11°C</span>
                 </p>
               </div>
             </div>
@@ -302,9 +332,9 @@
               <div class="card-body">
                 <h5 class="card-title">Antuérpia</h5>
                 <p class="card-text">
-                  <span class="temp-max">9°</span>
+                  <span class="temp-max">9°C</span>
                   /
-                  <span class="temp-min">-2°</span>
+                  <span class="temp-min">-2°C</span>
                 </p>
               </div>
             </div>
@@ -336,7 +366,7 @@
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Iníco</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-link">Reportar um erro</a></li>
             </ul>
           </div>
       
@@ -373,10 +403,10 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-md-6">
-                <h6>Idioma</h6>
+                <h6 id="lang-locale">Idioma</h6>
               </div>
               <div class="col-md-6">
-                <select name="" id="">
+                <select id="lang-select" class="w-100 select-settings">
                   <option value="PT">Português</option>
                   <option value="EN">Inglês</option>
                 </select>
@@ -384,12 +414,12 @@
             </div>
             <div class="row">
               <div class="col-md-6">
-                <h6>Medição</h6>
+                <h6>Sistema de medição</h6>
               </div>
               <div class="col-md-6">
-                <select name="" id="">
-                  <option value="C">Celsius (C)</option>
-                  <option value="F">Farneheit (F)</option>
+                <select id="system-degrees-select" class="w-100 select-settings">
+                  <option value="metric">Celsius (°C)</option>
+                  <option value="imperial">Fahrenheit (°F)</option>
                 </select>
               </div>
             </div>
@@ -399,8 +429,10 @@
     </div>
     <!-- END MODAL SETTINGS -->
 
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Script jQuery -->
+    <script src="./js/api.js"></script>
   </body>
 </html>
