@@ -55,7 +55,7 @@
     <div class="container-fluid submenu">
       <ul class="navbar-nav d-flex flex-row justify-content-center align-items-center">
         <li class="submenu-item mx-4 my-1">
-            <a href="#" class="submenu-link">Hoje</a>
+            <a href="./detalhes.html" class="submenu-link">Hoje</a>
         </li>
         <li class="submenu-item mx-4 my-1">
             <a href="./forecast.html" class="submenu-link">Previsões</a>
@@ -77,121 +77,27 @@
 
             <div class="card-group mb-4" id="weatherGroup">
 
-                <div class="card card-weather me-4">
-                <h5 class="text-center mt-2">HOJE</h5>
-                <p class="text-center">14 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-                <div class="card card-weather me-4">
-                <h5 class="text-center mt-2">AMANHÃ</h5>
-                <p class="text-center">15 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-                <div class="card card-weather me-4">
-                <h5 class="text-center mt-2">SEXTA</h5>
-                <p class="text-center">16 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-                <div class="card card-weather me-4">
-                <h5 class="text-center mt-2">SÁBADO</h5>
-                <p class="text-center">17 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-                <div class="card card-weather me-4">
-                <h5 class="text-center mt-2">DOMINGO</h5>
-                <p class="text-center">18 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-                <div class="card card-weather">
-                <h5 class="text-center mt-2">SEGUNDA</h5>
-                <p class="text-center">19 Dez.</p>
-                <div class="text-center">
-                    <img src="https://www.tempo.pt/css/images/svg/newSymbols/6.svg" class="card-img-top img-weather" alt="...">
-                    <p>Humidade 90%</p>
-                </div>
-                <div class="card-body">
-                    <p class="text-center">
-                    <span class="temp-max">17°C</span>
-                    /
-                    <span class="temp-min">16°C</span>
-                    </p>
-        
-                    <p class="text-center">28 km/h</p>
-                </div>
-                </div>
-        
-        
             </div>
         </div>
         <div class="col-md-2">
 
         </div>
 
+    </div>
+
+    <div class="container">
+      <h5 id="titleTablePreview">Meteorologia, hoje, </h5>
+      <table class="table">
+        <tbody id="tablePrevisoes">
+          <tr>
+            <th>Horas</th>
+            <th>Ícone</th>
+            <th>Sensação Térmica</th>
+            <th>Descrição</th>
+            <th>Vento</th>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <!-- END FORECAST -->
 

@@ -55,13 +55,13 @@
     <div class="container-fluid submenu">
       <ul class="navbar-nav d-flex flex-row justify-content-center align-items-center">
         <li class="submenu-item mx-4 my-1">
-          <a href="./detalhes.html" class="submenu-link">Hoje</a>
+            <a href="./detalhes.html" class="submenu-link">Hoje</a>
         </li>
         <li class="submenu-item mx-4 my-1">
-          <a href="./forecast.html" class="submenu-link">Previsões</a>
+            <a href="./forecast.html" class="submenu-link">Previsões</a>
         </li>
         <li class="submenu-item mx-4 my-1">
-          <a href="./favoritos.html" class="submenu-link">Favoritos</a>
+            <a href="./favoritos.html" class="submenu-link">Favoritos</a>
         </li>
       </ul>
     </div>
@@ -69,48 +69,126 @@
 
     <!-- WEATHER -->
     <div class="container mt-4">
-      <div class="row" id="current-location">
-        <div class="col-md-6">
-          <div class="card mb-3 p-3 cityCardCL" onclick="detalhesRef()" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title" id="cityNameCL"></h5>
-                  <p class="card-text">
-                    <span class="temp-max" id="tempMaxCL"></span>
-                    /
-                    <span class="temp-min" id="tempMinCL"></span>
-                  </p>
-                  <p class="card-text m-0" id="feel-weather"></p>
-                  <p class="card-text m-0" id="weatherDescCL"></p>
+        <div class="row" id="current-location">
+          <div class="col-md-6">
+            <div class="card mb-3 p-3 cityCardCL" style="max-width: 540px; cursor: default;">
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <i class="fa-regular fa-star fa-lg" id="addFav"></i>
+                    <h5 class="card-title" id="cityNameCL"></h5>
+                    <p class="card-text">
+                      <span class="temp-max" id="tempMaxCL"></span>
+                      /
+                      <span class="temp-min" id="tempMinCL"></span>
+                    </p>
+                    <p class="card-text m-0" id="feel-weather"></p>
+                    <p class="card-text m-0" id="weatherDescCL"></p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 my-auto">
-                <img src="" alt="" id="imgWeatherCL" class="img-weather">
+                <div class="col-md-4 my-auto">
+                  <img src="" alt="" id="imgWeatherCL" class="img-weather">
+                </div>
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            
+            <div class="card mb-3 p-3 cityCardCL" style="max-width: 940px; cursor: default;">
+                <div class="row g-0">
+                  <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-center">Nascer do sol</h5>
+                            <span class="d-flex justify-content-center align-items-center my-4 py-3">
+                                <i class="fa-solid fa-sun fa-2xl"></i><i class="fa-solid fa-arrow-up fa-2xl"></i>
+                            </span>
+                            <p class="text-center" id="sunrise">17:20 Jan 27</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-center">Pôr do sol</h5>
+                            <span class="d-flex justify-content-center align-items-center my-4 py-3">
+                                <i class="fa-solid fa-sun fa-2xl"></i><i class="fa-solid fa-arrow-down fa-2xl"></i>
+                            </span>
+                            <p class="text-center" id="sunset">17:20 Jan 27</p>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+          </div>
         </div>
-        <div class="col-md-6">
-          
-        </div>
+  
       </div>
+      <!-- END WEATHER -->
 
-    </div>
-    <!-- END WEATHER -->
+      <!-- CITY WEATHER INFO -->
+    <div class="container mt-4">
+        <div class="row" style="padding: 12px;">
+            <div class="card mb-3 p-3 cityCardCL" style="max-width: 100%; cursor: default;">
+              <div class="row g-0">
+                <div class="card-body">
+                    <h5 id="cityDetailsTitle">Meteorologia, hoje,</h5>
+                </div>
 
-    <!-- POPULAR PLACES -->
-    <div class="container-fluid bg-light mt-4">
-      <div class="container">
-        <h3 class="py-4">Mais pesquisadas</h3>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 pb-4" id="cidadesList">
-
+                <div class="col-md-6">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-droplet"></i></th>
+                            <td>Humidade</td>
+                            <td></td>
+                            <td id="humidadeVal"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-arrows-down-to-line"></i></th>
+                            <td>Pressão Atmosférica</td>
+                            <td></td>
+                            <td id="pressaoVal"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-wind"></i></th>
+                            <td>Vento</td>
+                            <td></td>
+                            <td id="ventoVal"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-eye"></i></th>
+                            <td>Visibilidade</td>
+                            <td></td>
+                            <td id="visibilidadeVal"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-cloud"></i></th>
+                            <td>Nuvens</td>
+                            <td></td>
+                            <td id="nuvensVal"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fa-solid fa-map-location-dot"></i></th>
+                            <td>Coordenadas Geográficas</td>
+                            <td></td>
+                            <td id="coordVal"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                
+              </div>
+            </div>
         </div>
-
-      </div>
     </div>
-    <!-- END POPULAR PLACES -->
+      <!-- END CITY WEATHER INFO -->
+
+    
 
     <!-- FOOTER -->
     <div class="container-fluid bg-footer mt-auto">
