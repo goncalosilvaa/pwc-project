@@ -84,6 +84,11 @@ body {
     height: auto !important;
 }
 
+#imgWeatherCL {
+    width: 110px !important;
+    height: auto !important;
+}
+
 .temp-max {
     color: var(--tempmax-color);
 }
@@ -126,3 +131,21 @@ body {
 
 
 /* END MODAL SETTINGS */
+
+/* LIST-GROUP */
+.list-group-item {
+    border-top: 1px solid rgba(0,0,0,.125) !important;
+    border-radius: 4px !important;
+}
+
+/* END LIST GROUP */
+
+.card-weather {
+    border: 1px solid rgba(0,0,0,.125) !important;
+    border-radius: 4px !important;
+}
+
+.card-weather:hover {
+    cursor: pointer;
+    background-color: #f8f9fa!important;
+}
