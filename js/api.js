@@ -338,11 +338,16 @@ $.get("https://api.openweathermap.org/data/2.5/forecast?q="+localStorage.getItem
 
 
 // ---------------------
-
+$("#fakeFav").hide();
 // Listar favoritos
 if(localStorage.getItem("favs")!=null) {
     arrayFavs=JSON.parse(localStorage.getItem("favs"));
     for(let i=0;i<arrayFavs.length;i++) {
+        if(arrayFavs[i]==localStorage.getItem("cityDetalhes")) {
+            $("#addFav").hide();
+            $("#fakeFav").show();
+        }
+
         $.get("https://api.openweathermap.org/data/2.5/weather?q="+arrayFavs[i]+"&lang="+localStorage.getItem("lang")+"&units="+localStorage.getItem("system-degrees")+"&appid="+apiKey, function(data, status) {
             $("#listFavoritos").append("<li class='list-group-item mb-4 d-flex justify-content-between align-items-center'><div class='ms-2 me-auto'><div class='fw-bold'>"+arrayFavs[i]+"</div><span class='temp-max'>"+Math.floor(data.main.temp_max)+" "+degreeSufix+"</span> / <span class='temp-min'>"+Math.floor(data.main.temp_min)+" "+degreeSufix+"</span></div><i class='fa-solid fa-arrow-up-right-from-square me-2' onclick='redirectFav(\""+arrayFavs[i]+"\")'></i><i class='fa-solid fa-circle-xmark' onclick='removeFav(\""+arrayFavs[i]+"\")'></i></li>");
         });
@@ -350,7 +355,10 @@ if(localStorage.getItem("favs")!=null) {
 }
 
 // Adicionar favoritos
+
 $("#addFav").click(function() {
+    $(this).hide();
+    $("#fakeFav").fadeIn();
     arrayFavs.push(localStorage.getItem("cityDetalhes"));
     localStorage.setItem("favs", JSON.stringify(arrayFavs));
 });
@@ -360,6 +368,7 @@ function removeFav(city) {
     var index=arrayFavs.indexOf(city);
     arrayFavs.splice(index, 1);
     localStorage.setItem("favs", JSON.stringify(arrayFavs));
+    location.reload();
 }
 
 // Redirecionar do favorito
